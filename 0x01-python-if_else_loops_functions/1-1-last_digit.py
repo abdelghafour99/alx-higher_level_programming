@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-n = number % 10
+n = int(str(number)[-1])
 s = "Last digit of {} is {} and is {}"
 s1 = "greater than 5"
 s2 = "0"
