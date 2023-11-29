@@ -9,8 +9,8 @@ s3 = "less than 6 and not 0"
 if number < 0:
     n = -n
 if n > 5:
-    print(s.format(number, n, s1), end="")
+    print(s.format(number, n, s1))
 elif n == 0:
-    print(s.format(number, n, s2), end="")
-else:
-    print(s.format(number, n, s3), end="")
+    print(s.format(number, n, s2))
+elif n < 6:
+    print(s.format(number, n, s3))
