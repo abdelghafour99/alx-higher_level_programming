@@ -14,7 +14,6 @@ else:
     S0 += 's:'
 print(S0.format(argc))
 
-
 i = 0
 for ar in sys.argv:
     if i != 0:
