@@ -2,6 +2,30 @@
 #include <stddef.h>
 
 /**
+ * palindrome - utility for is_palindrome
+ *
+ * @list: pointer to a pointer to the singly linked list
+ * @list2: pointer to the singly linked list
+ *
+ * Return: 1 if palindrome
+ *	   0 if not
+ */
+int palindrome(listint_t **list, listint_t *list2)
+{
+	int res = 0;
+
+	if (list2 == NULL)
+		return (1);
+
+	if (palindrome(list, list2->next) && ((*list)->n == list2->n))
+		res = 1;
+
+	*list = (*list)->next;
+
+	return (res);
+}
+
+/**
  * is_palindrome - Check if a giving singly linked list is a palindrome
  * @head: Adress to the givin list
  *
@@ -10,39 +34,5 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *cur = *head;
-	listint_t *last_nod = *head, *pre = NULL;
-
-	if (!head || !(*head))
-		return (1);
-	if (!(*head)->next)
-		return (1);
-
-	while (last_nod->next)
-		last_nod = last_nod->next;
-
-	while (cur)
-	{
-		if (pre)
-		{
-			while ((last_nod->next != pre) && last_nod->next)
-				last_nod = last_nod->next;
-
-			if (last_nod == cur)
-				break;
-		}
-
-		if (last_nod->n == cur->n)
-		{
-			if (cur->next == last_nod)
-				break;
-
-			pre = last_nod;
-			cur = cur->next;
-			last_nod = cur;
-		}
-		else
-			return (0);
-	}
-	return (1);
+	return (palindrome(head, *head));
 }
