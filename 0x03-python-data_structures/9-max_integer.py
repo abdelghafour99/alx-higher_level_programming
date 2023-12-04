@@ -8,4 +8,3 @@ def max_integer(my_list=[]):
         return b
     else:
         return None
-        
