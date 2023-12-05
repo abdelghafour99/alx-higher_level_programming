@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <Python.h>
+#include "Python.h"
+#include <stdlib.h>
 
 /**
  * print_python_list_info - function that prints
@@ -9,19 +10,19 @@
 
 void print_python_list_info(PyObject *p)
 {
-	long int s, a;
-	PyListObject *py_list;
-	PyObject *itm;
+	PyListObject *py_list = NULL;
+	ssize_t len_list = 0;
+	ssize_t a = 0;
+	const char *el_type = NULL;
 
-	s = Py_SIZE(p);
-	printf("[*] Size of the Python List = %ld\n", s);
-
+	len_list = PyList_Size(p);
 	py_list = (PyListObject *)p;
-	printf("[*] Allocated = %ld\n", py_list->allocated);
-
-	for (a = 0; a < size; a++)
+	printf("[*] Size of the Python List = %ld\n", len_list);
+	printf("[*] Allocated = %ld\n", (signed long)(py_list->allocated));
+	while (a < len_list)
 	{
-		itm = PyList_GetItem(p, a);
-		printf("Element %ld: %s\n", a, Py_TYPE(itm)->tp_name);
+		el_type = Py_TYPE(py_list->ob_item[a])->tp_name;
+		printf("Element %ld: %s\n", a, el_type);
+		a++;
 	}
 }
