@@ -10,7 +10,7 @@ def roman_to_int(roman_string):
         if i < len(roman_string) - 1:
             b = my_list[roman_string[i + 1]]
             if a < b:
-                S -= 1
+                S -= a
                 c = 0
         if c:
             S += a
