@@ -5,6 +5,5 @@ def safe_print_list(my_list=[], x=0):
             print(my_list[i], end="")
         print("")
         return(x)
-    except ValueError:
-        print("Oops!  That was no valid number.  Try again...")
-        return(len(my_list))
+    except IndexError:
+        return(i)
