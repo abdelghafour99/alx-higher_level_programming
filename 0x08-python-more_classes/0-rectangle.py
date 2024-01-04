@@ -1,4 +1,8 @@
 #!/usr/bin/python3
-""" test """
+
+""" Define an empty class """
+
+
 class Rectangle:
+    """Empty """
     pass
