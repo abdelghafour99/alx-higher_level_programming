@@ -6,6 +6,7 @@ class Rectangle:
     """ The Class Rectangle """
 
     num_instance = 0
+    print_sym = "#"
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -41,7 +42,11 @@ class Rectangle:
         if self.__height == 0 or self.width == 0:
             return total
         for i in range(self.__height):
-            total += ("#" * self.__width)
+            for j in range(self.__width):
+                try:
+                    total += str(self.print_sym)
+                except Exception:
+                    total += type(self).print_sym
             if i is not self.__height - 1:
                 total += "\n"
         return total
