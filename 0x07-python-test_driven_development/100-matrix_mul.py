@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+"""
+function that multiplies 2 matrices
+"""
+
+
 def matrix_mul(m_a, m_b):
+    """The code"""
     if type(m_a) != list:
         raise TypeError("m_a must be a list")
     if type(m_b) != list:
