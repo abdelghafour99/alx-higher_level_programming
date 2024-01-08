@@ -1,5 +1,12 @@
 #!/usr/bin/python3
+"""
+function that divides all elements of a matrix
+"""
+
+
 def matrix_divided(matrix, div):
+    """The Code"""
+
     a = len(matrix[0])
     mat = [[0 for i in range(a)] for j in range(len(matrix))]
     mes = "matrix must be a matrix (list of lists) of integers/floats"
