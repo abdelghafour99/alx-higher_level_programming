@@ -8,5 +8,4 @@ def write_file(filename="", text=""):
     """The code"""
 
     with open(filename, "w", encoding="utf-8") as f:
-        wlen = f.write(text)
-        return(wlen)
+        return(f.write(text))
