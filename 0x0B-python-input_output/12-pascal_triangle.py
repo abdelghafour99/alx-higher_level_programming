@@ -14,7 +14,7 @@ def pascal_tri(n):
         lis = [1 for i in range(n)]
         for i in range(1, n-1):
             lis[i] = pascal_tri(n-1)[i-1] + pascal_tri(n-1)[i]
-    return l
+    return lis
 
 
 def pascal_triangle(n):
@@ -23,8 +23,6 @@ def pascal_triangle(n):
     if type(n) != int:
         raise TypeError("n should be an integer")
     if n <= 0:
-        print([])
+        return []
     else:
-        for i in range(1, n+1):
-
-            print(pascal_tri(i))
+        return[pascal_tri(i) for i in range(1, n+1)]
