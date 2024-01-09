@@ -25,6 +25,6 @@ def pascal_triangle(n):
     if type(n) != int:
         raise TypeError("n should be an integer")
     if n <= 0:
-        return []
+        return [[]]
     else:
         return[pascal_tri(i) for i in range(1, n+1)]
