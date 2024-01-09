@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module defines a class Student"""
+"""My class Student"""
 
 
 class Student:
@@ -13,10 +13,12 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """Gets a dictionary representation of the Student.
-        If attrs is a list of strings, represents only those attributes
-        included in the list
         """
+        Retrieves a dictionary representation of a Student instance:
+         - If attrs is a list of strings,
+           only attribute names contained in this list must be retrieved.
+         - Otherwise, all attributes must be retrieved
+         """
 
         if (type(attrs) == list and
                 all(type(elem) == str for elem in attrs)):
@@ -24,7 +26,8 @@ class Student:
         return self.__dict__
 
     def reload_from_json(self, json):
-        """Replaces all attributes of the Student
+        """
+        Replaces all attributes of the Student
         """
         for i, j in json.items():
             setattr(self, i, j)
