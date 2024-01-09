@@ -9,5 +9,4 @@ def append_write(filename="", text=""):
     """The code"""
 
     with open(filename, "a", encoding="utf-8") as f:
-        alen = f.write(text)
-        return(alen)
+        return f.write(text)
