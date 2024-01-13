@@ -1,8 +1,15 @@
 #!/usr/bin/python3
-class Square:
-    pass
+"""
+The Class Square
+"""
 
-    def __init__(self, size):
+
+class Square:
+    """
+    Define a Squre Class
+    """
+
+    def __init__(self, size=0):
         self.__size = size
         if type(size) != int:
             raise TypeError("size must be an integer")

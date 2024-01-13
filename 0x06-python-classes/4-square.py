@@ -1,9 +1,16 @@
 #!/usr/bin/python3
+"""
+The Square Class
+"""
+
+
 class Square:
-    pass
+    """
+    Define a Square Class
+    """
 
     @size.setter
-    def __init__(self, size):
+    def __init__(self, size=0):
         self.__size = size
         if type(size) != int:
             raise TypeError("size must be an integer")
