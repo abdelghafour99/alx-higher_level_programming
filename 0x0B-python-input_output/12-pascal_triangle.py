@@ -27,4 +27,4 @@ def pascal_triangle(n):
     if n <= 0:
         return []
     else:
-        return[pascal_tri(i) for i in range(1, n+1)]
+        return [pascal_tri(i) for i in range(1, n+1)]
