@@ -9,5 +9,5 @@ class Square:
     Define the square class
     """
 
-    def __dict__(self, size):
-        self.size = size
+    def __init__(self, size):
+        self.__size = size
