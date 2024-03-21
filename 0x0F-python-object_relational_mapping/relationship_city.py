@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-# Python_file
-
-
+""" Python_file """
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
