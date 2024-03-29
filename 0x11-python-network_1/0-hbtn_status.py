@@ -1,4 +1,6 @@
-""" Python Script """
+#!/usr/bin/python3
+"""This python script fetches https://intranet.hbtn.io/status"""
+import urllib.request
 
 
 if __name__ == "__main__":
